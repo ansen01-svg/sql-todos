@@ -21,14 +21,13 @@ const editTodo = asyncHandler(async (req, res) => {
   }
 
   if (fields.length === 0) {
-    throw new ApiErrors(401, "Please provide all the fields");
+    throw new ApiErrors(400, "Please provide all the fields");
   }
 
   query += ` ${fields.join(", ")} WHERE id = ?`;
   values.push(id);
 
   const [result] = await pool.execute(query, values);
-  console.log(result);
 
   if (result.affectedRows < 1) {
     throw new ApiErrors(501, "An error occured while updating todo");

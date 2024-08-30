@@ -9,6 +9,6 @@ const router = express.Router();
 router.route("/getAllTodos").get(getAllTodos);
 router.route("/addTodo").post(addTodo);
 router.route("/editTodo").post(editTodo);
-router.route("/deleteTodo/:id").post(deleteTodo);
+router.route("/deleteTodo/:id").delete(deleteTodo);
 
 module.exports = router;

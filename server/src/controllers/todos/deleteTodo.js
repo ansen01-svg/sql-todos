@@ -7,13 +7,12 @@ const deleteTodo = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
   if (!id) {
-    throw new ApiErrors(401, "Please provide id");
+    throw new ApiErrors(400, "Please provide id");
   }
 
   const query = "DELETE FROM todos WHERE id = ?";
 
   const [result] = await pool.execute(query, [id]);
-  console.log(result);
 
   if (result.affectedRows < 1) {
     throw new ApiErrors(501, "There was an error while deleting the todo");
