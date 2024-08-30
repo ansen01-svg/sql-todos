@@ -47,7 +47,7 @@ const AddTodosSection = () => {
   };
 
   return (
-    <div className="w-full px-3 py-10 flex flex-col items-center justify-center gap-8">
+    <div className="w-full px-3 py-8 flex flex-col items-center justify-center gap-8">
       <div className="w-full">
         <h1 className="text-center text-[25px] font-bold">Add Todo</h1>
       </div>
