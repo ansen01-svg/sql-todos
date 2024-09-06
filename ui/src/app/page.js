@@ -6,7 +6,7 @@ export default function Home() {
     <div className="w-full min-h-[100vh] flex items-start justify-center">
       <div className="w-[95%] md:w-[50%]">
         <AddTodosSection />
-        <DisplayTodosSection />
+        {/* <DisplayTodosSection /> */}
       </div>
     </div>
   );
